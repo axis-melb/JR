@@ -1,0 +1,69 @@
+/* /assets/css/style.css - Metricon Inspired Style with Image Logo */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --text-dark: #1a1a1a;
+    --text-light: #555555;
+    --accent-color: #222222;
+    --bg-light: #f9f9f9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', 'PingFang HK', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: #ffffff; }
+
+header {
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    background: #ffffff; padding: 1rem 5%;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid #eaeaea; transition: all 0.3s ease;
+}
+
+/* 🌟 控制 Logo 图片的样式 🌟 */
+.logo { display: flex; align-items: center; text-decoration: none; }
+.logo img { height: 45px; width: auto; max-width: 200px; object-fit: contain; }
+
+.nav-links { display: flex; gap: 40px; align-items: center; }
+.nav-links a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: var(--text-dark); border-bottom: 2px solid var(--text-dark); padding-bottom: 4px; }
+.lang-btn { border: 1px solid #ddd; padding: 6px 16px; border-radius: 4px; font-size: 0.85rem !important; }
+.lang-btn:hover { background: #f4f4f4; border-bottom: 1px solid #ddd !important; }
+
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.hamburger span { width: 25px; height: 2px; background: var(--text-dark); }
+
+.hero {
+    height: 80vh; min-height: 500px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 0 10%;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('../images/hero-home.jpg') center/cover;
+    color: white; margin-top: 70px;
+}
+.hero h1 { font-size: 4rem; font-weight: 600; line-height: 1.1; margin-bottom: 1.5rem; max-width: 800px; }
+.hero p { font-size: 1.2rem; margin-bottom: 2.5rem; font-weight: 300; max-width: 600px; }
+
+.btn-solid { background: var(--text-dark); color: white; padding: 14px 32px; text-decoration: none; font-weight: 500; letter-spacing: 0.5px; transition: 0.3s; }
+.btn-solid:hover { background: #444; }
+.btn-outline { border: 1px solid white; color: white; padding: 14px 32px; text-decoration: none; font-weight: 500; transition: 0.3s; }
+.btn-outline:hover { background: white; color: var(--text-dark); }
+
+.section { padding: 6rem 5%; }
+.section-bg { background-color: var(--bg-light); }
+.text-center { text-align: center; }
+.title { font-size: 2.5rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-dark); }
+.subtitle { font-size: 1.1rem; color: var(--text-light); margin-bottom: 4rem; font-weight: 300; }
+
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+.product-card { text-decoration: none; color: inherit; display: block; }
+.img-wrapper { overflow: hidden; margin-bottom: 1.5rem; }
+.product-card img, .product-card video { width: 100%; height: 350px; object-fit: cover; transition: transform 0.6s ease; }
+.product-card:hover img, .product-card:hover video { transform: scale(1.05); }
+.product-card h3 { font-size: 1.4rem; font-weight: 500; margin-bottom: 0.5rem; }
+.product-card p { color: var(--text-light); font-weight: 300; }
+
+footer { background: #111; color: #888; padding: 4rem 5%; text-align: center; font-size: 0.9rem; font-weight: 300; }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #fff; padding: 2rem 0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+    .nav-links.active { display: flex; }
+    .hamburger { display: flex; }
+    .hero h1 { font-size: 2.5rem; }
+    .hero { height: 60vh; }
+}
