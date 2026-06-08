@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
@@ -6,8 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>產品與服務 | Juliet & Roland HK</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="canonical" href="https://jrtradinghk.com/products.html" />
     <link rel="canonical" href="https://jrtradinghk.com/zh-hk/products.html" />
+    <style>
+        /*
+         * ── 產品卡片格網 ───────────────────────────────────────────────────
+         * 如何新增產品子頁面：
+         *
+         * 1. 複製下方任意一個 <div class="product-card"> ... </div> 區塊。
+         * 2. 更新：圖片 src、h3 標題、p 說明文字。
+         * 3. 若有專屬子頁面：將 <a> href 指向新頁面（如 products-machinery.html）
+         *    並設定 data-mode="page"。
+         * 4. 若暫時只用 WhatsApp：保留 data-mode="wa"。
+         * ──────────────────────────────────────────────────────────────────
+         */
+        .card-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #111;
+            color: #fff;
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            padding: 4px 10px;
+            border-radius: 2px;
+            z-index: 1;
+        }
+        .product-card { position: relative; cursor: default; }
+        .btn-page {
+            display: inline-block;
+            background: transparent;
+            border: 1.5px solid #111;
+            color: #111;
+            padding: 10px 22px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .btn-page:hover { background: #111; color: #fff; }
+    </style>
 </head>
 <body>
     <header>
@@ -17,9 +53,9 @@
         </div>
         <nav class="nav-links" id="navLinks">
             <a href="index.html">首頁</a>
-            <a href="about-us.html">關於我們</a>
+            <a href="../about-us.html">關於我們</a>
             <a href="products.html" class="active">核心產品</a>
-            <a href="process.html">服務流程</a>
+            <a href="../process.html">服務流程</a>
             <a href="../products.html" class="lang-btn">English</a>
         </nav>
     </header>
@@ -31,38 +67,75 @@
 
     <section class="section">
         <div class="grid-3">
-            <div class="product-card" style="cursor: default;">
+
+            <!-- ═══════════════════════════════════════
+                 卡片 1 — 門窗系統（WhatsApp 詢盤）
+            ═══════════════════════════════════════ -->
+            <div class="product-card" data-mode="wa">
                 <div class="img-wrapper"><img src="../assets/images/product-windows.jpg" alt="澳標門窗"></div>
                 <h3>澳標門窗系統</h3>
                 <p style="margin-bottom: 1.5rem;">完全符合 AS/NZS 標準的鋁合金窗、入戶大門、摺疊門與推拉門，專為澳洲氣候設計。</p>
                 <a href="https://wa.me/85266610289" class="btn-solid" target="_blank" style="display: inline-block;">WhatsApp 立即詢價</a>
             </div>
 
-            <!-- 🌟 Outdoor Video Card 🌟 -->
-            <div class="product-card" style="cursor: default;">
+            <!-- ═══════════════════════════════════════
+                 卡片 2 — 戶外景觀建材（視頻卡片）
+            ═══════════════════════════════════════ -->
+            <div class="product-card" data-mode="wa">
                 <div class="img-wrapper">
                     <video autoplay loop muted playsinline>
                         <source src="../assets/images/product-outdoor.mp4" type="video/mp4">
                     </video>
                 </div>
                 <h3>戶外與景觀建材</h3>
-                <p style="margin-bottom: 1.5rem;">專為澳洲環境打造的高端戶外防腐木地板 (Decking)、涼亭、圍欄及戶外生活建材。</p>
+                <p style="margin-bottom: 1.5rem;">專為澳洲環境打造的高端防腐木地板、涼亭、圍欄及戶外生活建材。</p>
                 <a href="https://wa.me/85266610289" class="btn-solid" target="_blank" style="display: inline-block;">WhatsApp 立即詢價</a>
             </div>
 
-            <div class="product-card" style="cursor: default;">
+            <!-- ═══════════════════════════════════════
+                 卡片 3 — 高端定製木作
+            ═══════════════════════════════════════ -->
+            <div class="product-card" data-mode="wa">
                 <div class="img-wrapper"><img src="../assets/images/product-cabinets.jpg" alt="定製櫥櫃"></div>
                 <h3>高端定製木作與櫥櫃</h3>
                 <p style="margin-bottom: 1.5rem;">嚴格按照建築圖紙規格生產的高端廚櫃、衣櫃及衛浴浴櫃。</p>
                 <a href="https://wa.me/85266610289" class="btn-solid" target="_blank" style="display: inline-block;">WhatsApp 立即詢價</a>
             </div>
 
-            <div class="product-card" style="cursor: default;">
+            <!-- ═══════════════════════════════════════
+                 卡片 4 — 建築與結構建材
+            ═══════════════════════════════════════ -->
+            <div class="product-card" data-mode="wa">
                 <div class="img-wrapper"><img src="../assets/images/product-steel.jpg" alt="結構建材"></div>
                 <h3>建築與結構建材</h3>
                 <p style="margin-bottom: 1.5rem;">為澳洲項目精準採購結構鋼材、外牆掛板及其他特殊建築材料，並提供出廠前質檢。</p>
                 <a href="https://wa.me/85266610289" class="btn-solid" target="_blank" style="display: inline-block;">WhatsApp 立即詢價</a>
             </div>
+
+            <!-- ═══════════════════════════════════════
+                 卡片 5 — 定制法蘭 ✅ 有子頁面
+            ═══════════════════════════════════════ -->
+            <div class="product-card" data-mode="page">
+                <span class="card-tag">定制生產</span>
+                <div class="img-wrapper"><img src="../assets/images/flanges-finished-2.jpg" alt="定制法蘭——黃色環氧塗層成品"></div>
+                <h3>定制法蘭</h3>
+                <p style="margin-bottom: 1.5rem;">AS 2129、ANSI、DIN、JIS 或完全按 DWG 定制。碳鋼、不銹鋼、合金鋼均可，環氧塗層及除鏽處理按需提供。</p>
+                <a href="products-flanges.html" class="btn-page">查看詳情 →</a>
+            </div>
+
+            <!-- ═══════════════════════════════════════
+                 新增產品卡片請複製此區塊↓
+
+            <div class="product-card" data-mode="page">
+                <span class="card-tag">新品</span>
+                <div class="img-wrapper"><img src="../assets/images/product-你的圖片.jpg" alt="產品名稱"></div>
+                <h3>產品名稱</h3>
+                <p style="margin-bottom: 1.5rem;">產品簡介。</p>
+                <a href="products-你的頁面.html" class="btn-page">查看詳情 →</a>
+            </div>
+
+            ═══════════════════════════════════════ -->
+
         </div>
     </section>
 
@@ -78,10 +151,9 @@
         <p>&copy; 2026 Juliet and Roland Hong Kong Limited. 保留所有權利。</p>
         <p style="margin-top: 10px; line-height: 2;">
             香港 屯門<br>
-            WhatsApp: <a href="https://wa.me/85266610289" style="color: #ccc; text-decoration: none;">+852 6661 0289</a> | 
-            電郵: <a href="/cdn-cgi/l/email-protection#127a777e7e7d527860666073767b7c757a793c717d7f" style="color: #ccc; text-decoration: none;"><span class="__cf_email__" data-cfemail="573f323b3b38173d25232536333e39303f3c7934383a">[email&#160;protected]</span></a>
+            WhatsApp: <a href="https://wa.me/85266610289" style="color: #ccc; text-decoration: none;">+852 6661 0289</a> |
+            電郵: <a href="mailto:hello@jrtradinghk.com" style="color: #ccc; text-decoration: none;">hello@jrtradinghk.com</a>
         </p>
     </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1346921a63df40ac875e0188ce0958f3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
