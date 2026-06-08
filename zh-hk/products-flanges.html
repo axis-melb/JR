@@ -3,185 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>定制法蘭 | Juliet & Roland HK</title>
+    <title>產品與服務 | Juliet & Roland HK</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="canonical" href="https://jrtradinghk.com/zh-hk/products-flanges.html" />
+    <link rel="canonical" href="https://jrtradinghk.com/zh-hk/products.html" />
     <style>
-        .flange-hero {
-            background: #111;
-            padding: 140px 2rem 80px;
-            text-align: center;
-        }
-        .flange-hero h1 {
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            color: #fff;
-            margin-bottom: 1rem;
-        }
-        .flange-hero p {
-            color: #aaa;
-            font-size: 1.1rem;
-            max-width: 640px;
-            margin: 0 auto 2rem;
-        }
-        .hero-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 2.5rem;
-        }
-        .badge {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
-            color: #ccc;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            letter-spacing: 0.03em;
-        }
-        .product-showcase {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-            max-height: 480px;
-            overflow: hidden;
-        }
-        .product-showcase img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-        .product-showcase img:hover { transform: scale(1.03); }
-        .showcase-main { grid-row: span 2; }
-
-        .capability-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .cap-card {
-            background: #fff;
-            border: 1px solid #e8e8e8;
-            border-radius: 4px;
-            padding: 2rem 1.8rem;
-        }
-        .cap-card .icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
-        .cap-card h3 { font-size: 1.05rem; margin-bottom: 0.6rem; color: #111; }
-        .cap-card p { color: #666; font-size: 0.95rem; line-height: 1.7; margin: 0; }
-
-        .standards-table {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            border-collapse: collapse;
-        }
-        .standards-table th {
-            background: #111;
-            color: #fff;
-            padding: 14px 20px;
-            text-align: left;
-            font-size: 0.9rem;
-            letter-spacing: 0.04em;
-        }
-        .standards-table td {
-            padding: 13px 20px;
-            font-size: 0.95rem;
-            color: #444;
-            border-bottom: 1px solid #eee;
-        }
-        .standards-table tr:last-child td { border-bottom: none; }
-        .standards-table tr:hover td { background: #f9f9f9; }
-
-        .factory-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 6px;
-        }
-        .factory-gallery img {
-            width: 100%;
-            aspect-ratio: 4/3;
-            object-fit: cover;
-            display: block;
-        }
-        .factory-gallery img:first-child {
-            grid-column: span 2;
-            aspect-ratio: 16/9;
-        }
-
-        .process-steps {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0;
-            max-width: 1000px;
-            margin: 0 auto;
-            counter-reset: step;
-        }
-        .step {
-            flex: 1;
-            min-width: 160px;
-            padding: 2rem 1.5rem;
-            position: relative;
-            text-align: center;
-        }
-        .step::before {
-            counter-increment: step;
-            content: counter(step, decimal-leading-zero);
-            display: block;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #ddd;
-            margin-bottom: 0.8rem;
-        }
-        .step h4 { font-size: 0.95rem; color: #111; margin-bottom: 0.4rem; }
-        .step p { font-size: 0.85rem; color: #888; margin: 0; line-height: 1.6; }
-        .step:not(:last-child)::after {
-            content: '→';
+        /*
+         * ── 產品卡片格網 ───────────────────────────────────────────────────
+         * 如何新增產品子頁面：
+         *
+         * 1. 複製下方任意一個 <div class="product-card"> ... </div> 區塊。
+         * 2. 更新：圖片 src、h3 標題、p 說明文字。
+         * 3. 若有專屬子頁面：將 <a> href 指向新頁面（如 products-machinery.html）
+         *    並設定 data-mode="page"。
+         * 4. 若暫時只用 WhatsApp：保留 data-mode="wa"。
+         * ──────────────────────────────────────────────────────────────────
+         */
+        .card-tag {
             position: absolute;
-            right: -12px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #ccc;
-            font-size: 1.4rem;
-        }
-
-        .cta-band {
+            top: 12px;
+            left: 12px;
             background: #111;
-            padding: 5rem 2rem;
-            text-align: center;
+            color: #fff;
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            padding: 4px 10px;
+            border-radius: 2px;
+            z-index: 1;
         }
-        .cta-band h2 { color: #fff; font-size: 2rem; margin-bottom: 1rem; }
-        .cta-band p { color: #aaa; margin-bottom: 2rem; max-width: 560px; margin-left: auto; margin-right: auto; }
-        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-
-        .note-box {
-            background: #fffbea;
-            border-left: 3px solid #e6b800;
-            padding: 1.2rem 1.5rem;
-            border-radius: 0 4px 4px 0;
-            max-width: 900px;
-            margin: 2rem auto 0;
-            color: #664d00;
-            font-size: 0.95rem;
-            line-height: 1.7;
+        .product-card { position: relative; cursor: default; }
+        .btn-page {
+            display: inline-block;
+            background: transparent;
+            border: 1.5px solid #111;
+            color: #111;
+            padding: 10px 22px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: background 0.2s, color 0.2s;
         }
-
-        @media (max-width: 700px) {
-            .product-showcase { grid-template-columns: 1fr; max-height: none; }
-            .showcase-main { grid-row: span 1; }
-            .step:not(:last-child)::after { display: none; }
-            .factory-gallery { grid-template-columns: 1fr 1fr; }
-            .factory-gallery img:first-child { grid-column: span 2; }
-        }
+        .btn-page:hover { background: #111; color: #fff; }
     </style>
 </head>
 <body>
-
     <header>
-        <a href="../en-home.html" class="logo"><img src="../assets/images/logo.png" alt="JR Trading HK Logo"></a>
+        <a href="index.html" class="logo"><img src="../assets/images/logo.png" alt="JR Trading HK Logo"></a>
         <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('active')">
             <span></span><span></span><span></span>
         </div>
@@ -190,169 +56,95 @@
             <a href="../about-us.html">關於我們</a>
             <a href="products.html" class="active">核心產品</a>
             <a href="../process.html">服務流程</a>
-            <a href="../products-flanges.html" class="lang-btn">English</a>
+            <a href="../products.html" class="lang-btn">English</a>
         </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="flange-hero">
-        <p style="color:#999; font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1rem;">
-            <a href="products.html" style="color:#999; text-decoration:none;">核心產品</a> &nbsp;/&nbsp; 定制法蘭
-        </p>
-        <h1>定制法蘭<br>按圖生產，靈活交付</h1>
-        <p>從 DWG 圖紙到成品交貨——我們按澳洲標準、國際標準或客戶自定標準生產法蘭，提供全面塗層及表面處理方案。</p>
-        <div class="hero-badges">
-            <span class="badge">AS 2129 澳洲標準</span>
-            <span class="badge">ANSI / DIN / JIS</span>
-            <span class="badge">接受 DWG 圖紙</span>
-            <span class="badge">環氧粉末塗層</span>
-            <span class="badge">除鏽防腐處理</span>
-            <span class="badge">出口澳洲及東南亞</span>
-        </div>
-        <a href="https://wa.me/85266610289" class="btn-solid" target="_blank">立即詢價</a>
+    <section class="section section-bg text-center" style="padding-top: 150px; padding-bottom: 4rem;">
+        <h1 class="title">專為澳洲工程打造</h1>
+        <p class="subtitle" style="margin-bottom: 0;">瀏覽下方分類，透過 WhatsApp 與專家直接對接。</p>
     </section>
 
-    <!-- PRODUCT IMAGES -->
-    <div class="product-showcase">
-        <div class="showcase-main">
-            <img src="../assets/images/flanges-factory-1.jpg" alt="工廠生產中的不銹鋼法蘭">
-        </div>
-        <img src="../assets/images/flanges-finished-1.jpg" alt="黃色環氧塗層成品法蘭">
-        <img src="../assets/images/flanges-finished-2.jpg" alt="黃色環氧塗層法蘭近景">
-    </div>
-
-    <!-- CAPABILITIES -->
-    <section class="section section-bg">
-        <div class="text-center" style="margin-bottom: 3rem;">
-            <h2 class="title">我們的生產能力</h2>
-            <p class="subtitle">工廠可生產所有常見法蘭類型，並可按客戶提供的圖紙定制加工。</p>
-        </div>
-        <div class="capability-grid">
-            <div class="cap-card">
-                <span class="icon">⚙️</span>
-                <h3>全系列法蘭類型</h3>
-                <p>平焊法蘭、對焊法蘭、盲法蘭、承插焊法蘭、螺紋法蘭、松套法蘭——碳鋼、不銹鋼及合金鋼均可生產。</p>
-            </div>
-            <div class="cap-card">
-                <span class="icon">📐</span>
-                <h3>DWG 定制加工</h3>
-                <p>提交 AutoCAD DWG 或 PDF 圖紙，我們按您的精確規格生產，無需受限於標準型錄尺寸。</p>
-            </div>
-            <div class="cap-card">
-                <span class="icon">🖌️</span>
-                <h3>表面處理與塗層</h3>
-                <p>噴砂除鏽、拋丸處理、防鏽底漆、環氧粉末塗層（燃氣管道用黃色、水管用黑色）及 FBE 塗層均可按需提供。</p>
-            </div>
-            <div class="cap-card">
-                <span class="icon">📦</span>
-                <h3>靈活起訂量與全球出口</h3>
-                <p>服務澳洲建築商、東南亞進口商及全球項目採購方。提供具競爭力的深圳/廣州 FOB 離岸價。</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- STANDARDS TABLE -->
     <section class="section">
-        <div class="text-center" style="margin-bottom: 2.5rem;">
-            <h2 class="title">支持的生產標準</h2>
-            <p class="subtitle">我們可按以下標準生產，亦可完全按您的 DWG 圖紙定制。</p>
-        </div>
-        <table class="standards-table">
-            <thead>
-                <tr>
-                    <th>標準</th>
-                    <th>適用地區 / 用途</th>
-                    <th>備注</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>AS 2129</strong></td>
-                    <td>澳洲 / 紐西蘭</td>
-                    <td>Table D、E、F、H——適用於水務、燃氣及一般工業管道</td>
-                </tr>
-                <tr>
-                    <td><strong>ANSI / ASME B16.5</strong></td>
-                    <td>美國 / 國際通用</td>
-                    <td>Class 150 至 2500，所有常用口徑</td>
-                </tr>
-                <tr>
-                    <td><strong>DIN / EN 1092</strong></td>
-                    <td>歐洲</td>
-                    <td>PN6 至 PN100</td>
-                </tr>
-                <tr>
-                    <td><strong>JIS B2220</strong></td>
-                    <td>日本 / 東南亞</td>
-                    <td>5K 至 40K 壓力等級</td>
-                </tr>
-                <tr>
-                    <td><strong>客戶 DWG</strong></td>
-                    <td>任何地區</td>
-                    <td>提交 AutoCAD DWG 或 PDF，按您的規格生產</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="note-box">
-            💡 <strong>可提供打樣服務：</strong>批量訂單前可安排樣品生產，供品質確認。AS 2129 標準打樣亦可按需安排。請聯絡我們討論您的項目時間表。
+        <div class="grid-3">
+
+            <!-- ═══════════════════════════════════════
+                 卡片 1 — 門窗系統（WhatsApp 詢盤）
+            ═══════════════════════════════════════ -->
+            <div class="product-card" data-mode="wa">
+                <div class="img-wrapper"><img src="../assets/images/product-windows.jpg" alt="澳標門窗"></div>
+                <h3>澳標門窗系統</h3>
+                <p style="margin-bottom: 1.5rem;">完全符合 AS/NZS 標準的鋁合金窗、入戶大門、摺疊門與推拉門，專為澳洲氣候設計。</p>
+                <a href="https://wa.me/85266610289" class="btn-solid" target="_blank" style="display: inline-block;">WhatsApp 立即詢價</a>
+            </div>
+
+            <!-- ═══════════════════════════════════════
+                 卡片 2 — 戶外景觀建材（視頻卡片）
+            ═══════════════════════════════════════ -->
+            <div class="product-card" data-mode="wa">
+                <div class="img-wrapper">
+                    <video autoplay loop muted playsinline>
+                        <source src="../assets/images/product-outdoor.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>戶外與景觀建材</h3>
+                <p style="margin-bottom: 1.5rem;">專為澳洲環境打造的高端防腐木地板、涼亭、圍欄及戶外生活建材。</p>
+                <a href="https://wa.me/85266610289" class="btn-solid" target="_blank" style="display: inline-block;">WhatsApp 立即詢價</a>
+            </div>
+
+            <!-- ═══════════════════════════════════════
+                 卡片 3 — 高端定製木作
+            ═══════════════════════════════════════ -->
+            <div class="product-card" data-mode="wa">
+                <div class="img-wrapper"><img src="../assets/images/product-cabinets.jpg" alt="定製櫥櫃"></div>
+                <h3>高端定製木作與櫥櫃</h3>
+                <p style="margin-bottom: 1.5rem;">嚴格按照建築圖紙規格生產的高端廚櫃、衣櫃及衛浴浴櫃。</p>
+                <a href="https://wa.me/85266610289" class="btn-solid" target="_blank" style="display: inline-block;">WhatsApp 立即詢價</a>
+            </div>
+
+            <!-- ═══════════════════════════════════════
+                 卡片 4 — 建築與結構建材
+            ═══════════════════════════════════════ -->
+            <div class="product-card" data-mode="wa">
+                <div class="img-wrapper"><img src="../assets/images/product-steel.jpg" alt="結構建材"></div>
+                <h3>建築與結構建材</h3>
+                <p style="margin-bottom: 1.5rem;">為澳洲項目精準採購結構鋼材、外牆掛板及其他特殊建築材料，並提供出廠前質檢。</p>
+                <a href="https://wa.me/85266610289" class="btn-solid" target="_blank" style="display: inline-block;">WhatsApp 立即詢價</a>
+            </div>
+
+            <!-- ═══════════════════════════════════════
+                 卡片 5 — 定制法蘭 ✅ 有子頁面
+            ═══════════════════════════════════════ -->
+            <div class="product-card" data-mode="page">
+                <span class="card-tag">定制生產</span>
+                <div class="img-wrapper"><img src="../assets/images/flanges-finished-2.jpg" alt="定制法蘭——黃色環氧塗層成品"></div>
+                <h3>定制法蘭</h3>
+                <p style="margin-bottom: 1.5rem;">AS 2129、ANSI、DIN、JIS 或完全按 DWG 定制。碳鋼、不銹鋼、合金鋼均可，環氧塗層及除鏽處理按需提供。</p>
+                <a href="products-flanges.html" class="btn-page">查看詳情 →</a>
+            </div>
+
+            <!-- ═══════════════════════════════════════
+                 新增產品卡片請複製此區塊↓
+
+            <div class="product-card" data-mode="page">
+                <span class="card-tag">新品</span>
+                <div class="img-wrapper"><img src="../assets/images/product-你的圖片.jpg" alt="產品名稱"></div>
+                <h3>產品名稱</h3>
+                <p style="margin-bottom: 1.5rem;">產品簡介。</p>
+                <a href="products-你的頁面.html" class="btn-page">查看詳情 →</a>
+            </div>
+
+            ═══════════════════════════════════════ -->
+
         </div>
     </section>
 
-    <!-- FACTORY GALLERY -->
     <section class="section section-bg">
-        <div class="text-center" style="margin-bottom: 2.5rem;">
-            <h2 class="title">從工廠到工地</h2>
-            <p class="subtitle">所有法蘭均在大陸合作工廠機械加工，出口前完成尺寸及塗層質量檢驗。</p>
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <h2 class="title">企業出海與供應鏈諮詢</h2>
+            <p style="color: var(--text-light); margin-bottom: 2rem; font-size: 1.1rem;">我們為大陸製造企業提供專業的澳洲市場准入與 AS/NZS 合規諮詢；為澳洲開發商提供端到端的中國供應鏈審計服務。讓我們的20年工程積澱成為您的戰略優勢。</p>
+            <a href="https://wa.me/85266610289" class="btn-outline" target="_blank" style="color: var(--text-dark); border-color: var(--text-dark);">預約諮詢服務</a>
         </div>
-        <div class="factory-gallery" style="max-width: 1100px; margin: 0 auto;">
-            <img src="../assets/images/flanges-factory-2.jpg" alt="鐵絲籠中批量機加工法蘭">
-            <img src="../assets/images/flanges-factory-3.jpg" alt="待塗層的疊放法蘭">
-            <img src="../assets/images/flanges-factory-4.jpg" alt="生產中的法蘭">
-        </div>
-    </section>
-
-    <!-- ORDER PROCESS -->
-    <section class="section">
-        <div class="text-center" style="margin-bottom: 3rem;">
-            <h2 class="title">採購流程</h2>
-        </div>
-        <div class="process-steps">
-            <div class="step">
-                <h4>發送詢盤</h4>
-                <p>透過 WhatsApp 或電郵告知我們標準、口徑範圍、數量及塗層要求。</p>
-            </div>
-            <div class="step">
-                <h4>提交圖紙</h4>
-                <p>定制法蘭請提供 AutoCAD DWG 或 PDF，我們審閱並確認可行性。</p>
-            </div>
-            <div class="step">
-                <h4>報價</h4>
-                <p>兩個工作日內提供 FOB 離岸價及交貨期。</p>
-            </div>
-            <div class="step">
-                <h4>打樣 / 確認</h4>
-                <p>批量訂單前可安排樣品生產，供您確認品質。</p>
-            </div>
-            <div class="step">
-                <h4>生產與質檢</h4>
-                <p>工廠生產，並進行尺寸及塗層質量全面檢驗。</p>
-            </div>
-            <div class="step">
-                <h4>出貨</h4>
-                <p>負責出口文件、貨運協調，送達您指定港口或工地。</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-band">
-        <h2>準備好採購法蘭了嗎？</h2>
-        <p>發送您的圖紙、標準及數量，我們將在兩個工作日內回覆報價。</p>
-        <div class="cta-buttons">
-            <a href="https://wa.me/85266610289" class="btn-solid" target="_blank">WhatsApp 聯絡我們</a>
-            <a href="mailto:hello@jrtradinghk.com" class="btn-outline" style="color:#fff; border-color:#fff;">hello@jrtradinghk.com</a>
-        </div>
-        <p style="color:#666; font-size:0.85rem; margin-top:1.5rem;">+852 6661 0289 &nbsp;|&nbsp; 香港貿易公司，大陸工廠生產</p>
     </section>
 
     <footer>
@@ -363,6 +155,5 @@
             電郵: <a href="mailto:hello@jrtradinghk.com" style="color: #ccc; text-decoration: none;">hello@jrtradinghk.com</a>
         </p>
     </footer>
-
 </body>
 </html>
