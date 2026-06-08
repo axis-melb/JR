@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Flanges | Juliet & Roland HK</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="canonical" href="https://jrtradinghk.com/products-flanges.html" />
+    <style>
+        /* ── Page-specific additions ── */
+        .flange-hero {
+            background: #111;
+            padding: 140px 2rem 80px;
+            text-align: center;
+        }
+        .flange-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .flange-hero p {
+            color: #aaa;
+            font-size: 1.1rem;
+            max-width: 640px;
+            margin: 0 auto 2rem;
+        }
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+        .badge {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: #ccc;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            letter-spacing: 0.03em;
+        }
+
+        /* ── Hero product image strip ── */
+        .product-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            max-height: 480px;
+            overflow: hidden;
+        }
+        .product-showcase img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .product-showcase img:hover { transform: scale(1.03); }
+        .showcase-main { grid-row: span 2; }
+
+        /* ── Capability section ── */
+        .capability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .cap-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 4px;
+            padding: 2rem 1.8rem;
+        }
+        .cap-card .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .cap-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.6rem;
+            color: #111;
+        }
+        .cap-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ── Standards table ── */
+        .standards-table {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        .standards-table th {
+            background: #111;
+            color: #fff;
+            padding: 14px 20px;
+            text-align: left;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .standards-table td {
+            padding: 13px 20px;
+            font-size: 0.95rem;
+            color: #444;
+            border-bottom: 1px solid #eee;
+        }
+        .standards-table tr:last-child td { border-bottom: none; }
+        .standards-table tr:hover td { background: #f9f9f9; }
+
+        /* ── Factory gallery ── */
+        .factory-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+        .factory-gallery img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+        }
+        .factory-gallery img:first-child {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        /* ── Process steps ── */
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            max-width: 1000px;
+            margin: 0 auto;
+            counter-reset: step;
+        }
+        .step {
+            flex: 1;
+            min-width: 160px;
+            padding: 2rem 1.5rem;
+            position: relative;
+            text-align: center;
+        }
+        .step::before {
+            counter-increment: step;
+            content: counter(step, decimal-leading-zero);
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ddd;
+            margin-bottom: 0.8rem;
+        }
+        .step h4 { font-size: 0.95rem; color: #111; margin-bottom: 0.4rem; }
+        .step p { font-size: 0.85rem; color: #888; margin: 0; line-height: 1.6; }
+        .step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ccc;
+            font-size: 1.4rem;
+        }
+
+        /* ── CTA band ── */
+        .cta-band {
+            background: #111;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        .cta-band h2 { color: #fff; font-size: 2rem; margin-bottom: 1rem; }
+        .cta-band p { color: #aaa; margin-bottom: 2rem; max-width: 560px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* ── Note box ── */
+        .note-box {
+            background: #fffbea;
+            border-left: 3px solid #e6b800;
+            padding: 1.2rem 1.5rem;
+            border-radius: 0 4px 4px 0;
+            max-width: 900px;
+            margin: 2rem auto 0;
+            color: #664d00;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 700px) {
+            .product-showcase { grid-template-columns: 1fr; max-height: none; }
+            .showcase-main { grid-row: span 1; }
+            .step:not(:last-child)::after { display: none; }
+            .factory-gallery { grid-template-columns: 1fr 1fr; }
+            .factory-gallery img:first-child { grid-column: span 2; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="en-home.html" class="logo"><img src="assets/images/logo.png" alt="JR Trading HK Logo"></a>
+        <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('active')">
+            <span></span><span></span><span></span>
+        </div>
+        <nav class="nav-links" id="navLinks">
+            <a href="en-home.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="products.html" class="active">Our Products</a>
+            <a href="process.html">Process</a>
+            <a href="zh-hk/products-flanges.html" class="lang-btn">繁體中文</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="flange-hero">
+        <p style="color:#999; font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1rem;">
+            <a href="products.html" style="color:#999; text-decoration:none;">Our Products</a> &nbsp;/&nbsp; Flanges
+        </p>
+        <h1>Custom Flanges,<br>Built to Your Specification</h1>
+        <p>From DWG to delivery — we manufacture flanges to Australian, international, or customer-defined standards, with full coating and surface treatment options.</p>
+        <div class="hero-badges">
+            <span class="badge">AS 2129 Compatible</span>
+            <span class="badge">ANSI / DIN / JIS</span>
+            <span class="badge">Custom DWG Accepted</span>
+            <span class="badge">Epoxy Powder Coating</span>
+            <span class="badge">Anti-Rust Treatment</span>
+            <span class="badge">Export to AU &amp; SEA</span>
+        </div>
+        <a href="https://wa.me/85266610289" class="btn-solid" target="_blank">Request a Quote</a>
+    </section>
+
+    <!-- PRODUCT IMAGES -->
+    <div class="product-showcase">
+        <div class="showcase-main">
+            <img src="assets/images/flanges-factory-1.jpg" alt="Stainless steel flanges in production crates">
+        </div>
+        <img src="assets/images/flanges-finished-1.jpg" alt="Yellow epoxy coated flange finished product">
+        <img src="assets/images/flanges-finished-2.jpg" alt="Yellow epoxy coated flange close up">
+    </div>
+
+    <!-- CAPABILITIES -->
+    <section class="section section-bg">
+        <div class="text-center" style="margin-bottom: 3rem;">
+            <h2 class="title">What We Can Produce</h2>
+            <p class="subtitle">Our factory handles all common flange types and can manufacture to any customer-supplied drawing.</p>
+        </div>
+        <div class="capability-grid">
+            <div class="cap-card">
+                <span class="icon">⚙️</span>
+                <h3>All Standard Flange Types</h3>
+                <p>Slip-on, weld neck, blind, socket weld, threaded, lap joint — in carbon steel, stainless steel, or alloy steel.</p>
+            </div>
+            <div class="cap-card">
+                <span class="icon">📐</span>
+                <h3>Custom DWG Manufacturing</h3>
+                <p>Submit your AutoCAD DWG or PDF drawings and we will manufacture to exact specification. No catalogue minimums.</p>
+            </div>
+            <div class="cap-card">
+                <span class="icon">🖌️</span>
+                <h3>Surface Treatment & Coating</h3>
+                <p>Sandblasting, shot blasting, anti-rust primer, epoxy powder coating (yellow for gas, black for water), and FBE coating available.</p>
+            </div>
+            <div class="cap-card">
+                <span class="icon">📦</span>
+                <h3>Flexible MOQ & Export</h3>
+                <p>We serve Australian builders, Southeast Asian importers, and project buyers globally. Competitive FOB Shenzhen / FOB Guangzhou pricing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STANDARDS TABLE -->
+    <section class="section">
+        <div class="text-center" style="margin-bottom: 2.5rem;">
+            <h2 class="title">Supported Standards</h2>
+            <p class="subtitle">We manufacture to the following standards, or fully custom per your DWG.</p>
+        </div>
+        <table class="standards-table">
+            <thead>
+                <tr>
+                    <th>Standard</th>
+                    <th>Region / Application</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>AS 2129</strong></td>
+                    <td>Australia / New Zealand</td>
+                    <td>Tables D, E, F, H — water, gas, and general service</td>
+                </tr>
+                <tr>
+                    <td><strong>ANSI / ASME B16.5</strong></td>
+                    <td>United States / International</td>
+                    <td>Class 150 to 2500, all common sizes</td>
+                </tr>
+                <tr>
+                    <td><strong>DIN / EN 1092</strong></td>
+                    <td>Europe</td>
+                    <td>PN6 to PN100</td>
+                </tr>
+                <tr>
+                    <td><strong>JIS B2220</strong></td>
+                    <td>Japan / Southeast Asia</td>
+                    <td>5K to 40K ratings</td>
+                </tr>
+                <tr>
+                    <td><strong>Customer DWG</strong></td>
+                    <td>Any region</td>
+                    <td>Submit AutoCAD DWG or PDF — we manufacture to your spec</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note-box">
+            💡 <strong>Sampling available:</strong> We offer production samples for quality verification before bulk orders. AS 2129 test samples can be arranged. Contact us to discuss your project timeline.
+        </div>
+    </section>
+
+    <!-- FACTORY GALLERY -->
+    <section class="section section-bg">
+        <div class="text-center" style="margin-bottom: 2.5rem;">
+            <h2 class="title">From Factory to Site</h2>
+            <p class="subtitle">All flanges are machined in our Mainland China partner facility and QC-inspected before export.</p>
+        </div>
+        <div class="factory-gallery" style="max-width: 1100px; margin: 0 auto;">
+            <img src="assets/images/flanges-factory-2.jpg" alt="Large batch of machined flanges in wire crates">
+            <img src="assets/images/flanges-factory-3.jpg" alt="Stacked flanges awaiting coating">
+            <img src="assets/images/flanges-factory-4.jpg" alt="Flanges in production">
+        </div>
+    </section>
+
+    <!-- ORDER PROCESS -->
+    <section class="section">
+        <div class="text-center" style="margin-bottom: 3rem;">
+            <h2 class="title">How to Order</h2>
+        </div>
+        <div class="process-steps">
+            <div class="step">
+                <h4>Send Enquiry</h4>
+                <p>WhatsApp or email us your standard, size range, quantity, and coating requirements.</p>
+            </div>
+            <div class="step">
+                <h4>Submit DWG</h4>
+                <p>For custom flanges, share your AutoCAD DWG or PDF. We review and confirm feasibility.</p>
+            </div>
+            <div class="step">
+                <h4>Quotation</h4>
+                <p>We provide a FOB price and lead time within 2 business days.</p>
+            </div>
+            <div class="step">
+                <h4>Sample / Approval</h4>
+                <p>Sample production available before bulk order commitment.</p>
+            </div>
+            <div class="step">
+                <h4>Production & QC</h4>
+                <p>Factory production with dimensional and coating inspection.</p>
+            </div>
+            <div class="step">
+                <h4>Shipment</h4>
+                <p>Export documentation, freight coordination, and delivery to your port or site.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+        <h2>Ready to Source Your Flanges?</h2>
+        <p>Send us your drawings, standard, and quantities. We'll respond within 2 business days with a quote.</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/85266610289" class="btn-solid" target="_blank">WhatsApp Us</a>
+            <a href="mailto:hello@jrtradinghk.com" class="btn-outline" style="color:#fff; border-color:#fff;">hello@jrtradinghk.com</a>
+        </div>
+        <p style="color:#666; font-size:0.85rem; margin-top:1.5rem;">+852 6661 0289 &nbsp;|&nbsp; Hong Kong based, Mainland China production</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Juliet and Roland Hong Kong Limited. All rights reserved.</p>
+        <p style="margin-top: 10px; line-height: 2;">
+            Tuen Mun, Hong Kong<br>
+            WhatsApp: <a href="https://wa.me/85266610289" style="color: #ccc; text-decoration: none;">+852 6661 0289</a> |
+            Email: <a href="mailto:hello@jrtradinghk.com" style="color: #ccc; text-decoration: none;">hello@jrtradinghk.com</a>
+        </p>
+    </footer>
+
+</body>
+</html>
