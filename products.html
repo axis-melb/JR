@@ -6,6 +6,53 @@
     <title>Products & Services | Juliet & Roland HK</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="canonical" href="https://jrtradinghk.com/products.html" />
+    <style>
+        /*
+         * ── PRODUCT CARD GRID ──────────────────────────────────────────────
+         * HOW TO ADD A NEW PRODUCT CATEGORY:
+         *
+         * 1. Copy one <div class="product-card"> ... </div> block below.
+         * 2. Update: img src, h3 title, p description.
+         * 3. For a dedicated sub-page: change the <a> href to your new page
+         *    (e.g. products-machinery.html) and set data-mode="page".
+         * 4. For WhatsApp-only (no sub-page yet): keep data-mode="wa".
+         *
+         * Card variants:
+         *   data-mode="page"  → shows "View Details →" button linking to sub-page
+         *   data-mode="wa"    → shows "Inquire via WhatsApp" button
+         * ──────────────────────────────────────────────────────────────────
+         */
+
+        /* Tag badge on cards that have a sub-page */
+        .card-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #111;
+            color: #fff;
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 2px;
+            z-index: 1;
+        }
+        .product-card { position: relative; cursor: default; }
+
+        /* Sub-page link button style */
+        .btn-page {
+            display: inline-block;
+            background: transparent;
+            border: 1.5px solid #111;
+            color: #111;
+            padding: 10px 22px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .btn-page:hover { background: #111; color: #fff; }
+    </style>
 </head>
 <body>
     <header>
@@ -24,20 +71,28 @@
 
     <section class="section section-bg text-center" style="padding-top: 150px; padding-bottom: 4rem;">
         <h1 class="title">Products & Services</h1>
-        <p class="subtitle" style="margin-bottom: 0;">Select a category below to inquire directly via WhatsApp.</p>
+        <p class="subtitle" style="margin-bottom: 0;">Custom-engineered and rigorously inspected for the Australian market and beyond.</p>
     </section>
 
     <section class="section">
         <div class="grid-3">
-            <div class="product-card" style="cursor: default;">
+
+            <!-- ═══════════════════════════════════════════════════════════
+                 CARD 1 — Windows & Doors  (WhatsApp only, no sub-page yet)
+                 To add a sub-page later: change data-mode to "page" and
+                 update the btn href to products-windows.html
+            ═══════════════════════════════════════════════════════════ -->
+            <div class="product-card" data-mode="wa">
                 <div class="img-wrapper"><img src="assets/images/product-windows.jpg" alt="Windows and Doors"></div>
                 <h3>Windows & Doors</h3>
                 <p style="margin-bottom: 1.5rem;">Fully compliant aluminum windows, entrance doors, bi-folds, and sliding systems.</p>
                 <a href="https://wa.me/85266610289" class="btn-solid" target="_blank" style="display: inline-block;">Inquire via WhatsApp</a>
             </div>
 
-            <!-- 🌟 Outdoor Video Card 🌟 -->
-            <div class="product-card" style="cursor: default;">
+            <!-- ═══════════════════════════════════════════════════════════
+                 CARD 2 — Outdoor & Alfresco  (video card, WhatsApp only)
+            ═══════════════════════════════════════════════════════════ -->
+            <div class="product-card" data-mode="wa">
                 <div class="img-wrapper">
                     <video autoplay loop muted playsinline>
                         <source src="assets/images/product-outdoor.mp4" type="video/mp4">
@@ -48,19 +103,52 @@
                 <a href="https://wa.me/85266610289" class="btn-solid" target="_blank" style="display: inline-block;">Inquire via WhatsApp</a>
             </div>
 
-            <div class="product-card" style="cursor: default;">
+            <!-- ═══════════════════════════════════════════════════════════
+                 CARD 3 — Custom Cabinetry  (WhatsApp only)
+            ═══════════════════════════════════════════════════════════ -->
+            <div class="product-card" data-mode="wa">
                 <div class="img-wrapper"><img src="assets/images/product-cabinets.jpg" alt="Custom Cabinetry"></div>
                 <h3>Custom Cabinetry</h3>
                 <p style="margin-bottom: 1.5rem;">High-end kitchens, wardrobes, and bathroom vanities to exact specifications.</p>
                 <a href="https://wa.me/85266610289" class="btn-solid" target="_blank" style="display: inline-block;">Inquire via WhatsApp</a>
             </div>
 
-            <div class="product-card" style="cursor: default;">
+            <!-- ═══════════════════════════════════════════════════════════
+                 CARD 4 — Structural Materials  (WhatsApp only)
+            ═══════════════════════════════════════════════════════════ -->
+            <div class="product-card" data-mode="wa">
                 <div class="img-wrapper"><img src="assets/images/product-steel.jpg" alt="Building Materials"></div>
                 <h3>Structural Materials</h3>
                 <p style="margin-bottom: 1.5rem;">Reliable sourcing and QC for structural steel, exterior cladding, and construction materials.</p>
                 <a href="https://wa.me/85266610289" class="btn-solid" target="_blank" style="display: inline-block;">Inquire via WhatsApp</a>
             </div>
+
+            <!-- ═══════════════════════════════════════════════════════════
+                 CARD 5 — Flanges  ✅ HAS SUB-PAGE
+                 data-mode="page" shows the "View Details" style button
+            ═══════════════════════════════════════════════════════════ -->
+            <div class="product-card" data-mode="page">
+                <span class="card-tag">Custom Order</span>
+                <div class="img-wrapper"><img src="assets/images/flanges-finished-2.jpg" alt="Custom Flanges — yellow epoxy coated"></div>
+                <h3>Custom Flanges</h3>
+                <p style="margin-bottom: 1.5rem;">AS 2129, ANSI, DIN, JIS or full custom DWG. Carbon steel, stainless, alloy. Epoxy coating and anti-rust treatment available.</p>
+                <a href="products-flanges.html" class="btn-page">View Details →</a>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════
+                 ADD NEW PRODUCT HERE — copy this block, fill in details
+                 Set data-mode="wa" for WhatsApp, or "page" for sub-page
+
+            <div class="product-card" data-mode="page">
+                <span class="card-tag">New</span>
+                <div class="img-wrapper"><img src="assets/images/product-YOURPRODUCT.jpg" alt="Product name"></div>
+                <h3>Product Name</h3>
+                <p style="margin-bottom: 1.5rem;">Short description of what you offer.</p>
+                <a href="products-YOURPRODUCT.html" class="btn-page">View Details →</a>
+            </div>
+
+            ═══════════════════════════════════════════════════════════ -->
+
         </div>
     </section>
 
@@ -72,12 +160,12 @@
         </div>
     </section>
 
-   <footer>
-        <p>&copy; 2026 Juliet and Roland Hong Kong Limited. 保留所有權利。</p>
+    <footer>
+        <p>&copy; 2026 Juliet and Roland Hong Kong Limited. All rights reserved.</p>
         <p style="margin-top: 10px; line-height: 2;">
-            香港 屯門<br>
-            WhatsApp: <a href="https://wa.me/85266610289" style="color: #ccc; text-decoration: none;">+852 6661 0289</a> | 
-            電郵: <a href="mailto:hello@jrtradinghk.com" style="color: #ccc; text-decoration: none;">hello@jrtradinghk.com</a>
+            Tuen Mun, Hong Kong<br>
+            WhatsApp: <a href="https://wa.me/85266610289" style="color: #ccc; text-decoration: none;">+852 6661 0289</a> |
+            Email: <a href="mailto:hello@jrtradinghk.com" style="color: #ccc; text-decoration: none;">hello@jrtradinghk.com</a>
         </p>
     </footer>
 </body>
