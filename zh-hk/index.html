@@ -6,6 +6,40 @@
     <title>首頁 | Juliet & Roland Hong Kong Limited</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="canonical" href="https://jrtradinghk.com/zh-hk/index.html" />
+    <style>
+        /* ── 付費預約卡片（Stripe Payment Link 佔位）───────────────────── */
+        .booking-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .booking-card {
+            flex: 1;
+            min-width: 280px;
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            padding: 2rem;
+            text-align: left;
+        }
+        .booking-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+        .booking-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        .booking-card .price {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -42,7 +76,7 @@
                 <h3>澳標門窗系統</h3>
                 <p>完全符合 AS/NZS 標準的鋁合金窗、入戶大門、摺疊門與推拉門系統。</p>
             </a>
-            
+
             <!-- 🌟 Outdoor Video Card 🌟 -->
             <a href="products.html" class="product-card">
                 <div class="img-wrapper">
@@ -84,12 +118,39 @@
         </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════════════════════
+         付費預約區塊 — Stripe Payment Link 佔位符
+         上線前：把兩個 href 換成真實的 Stripe Payment Link
+         （Stripe Dashboard → Payment Links → 建立產品 → 複製連結）
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="section section-bg">
+        <div class="text-center" style="margin-bottom: 2.5rem;">
+            <h2 class="title">預約付費諮詢</h2>
+            <p class="subtitle">選擇最適合您的諮詢方案，線上付款後我們將於 1 個工作天內與您聯繫安排時間。</p>
+        </div>
+        <div class="booking-grid">
+            <div class="booking-card">
+                <h3>出海合規框架搭建</h3>
+                <span class="price">HKD 待定</span>
+                <p>針對大陸製造企業，梳理澳洲 AS/NZS 合規要求、認證路徑與 NATA 測試對接，產出可執行的合規框架建議。</p>
+                <a href="https://buy.stripe.com/fZu7sNeDw2KDbd13CS04800" class="btn-solid" target="_blank">立即預約 →</a>
+            </div>
+            <div class="booking-card">
+                <h3>一起搭建你的公司出海計劃</h3>
+                <span class="price">HKD 待定</span>
+                <p>一對一深度諮詢，結合企業現狀，共同規劃澳洲市場准入路徑、供應鏈與合規落地步驟。</p>
+                <a href="https://buy.stripe.com/fZu7sNeDw2KDbd13CS04800" class="btn-solid" target="_blank">立即預約 →</a>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2026 Juliet and Roland Hong Kong Limited. 保留所有權利。</p>
         <p style="margin-top: 10px; line-height: 2;">
             香港 屯門<br>
             WhatsApp: <a href="https://wa.me/85266610289" style="color: #ccc; text-decoration: none;">+852 6661 0289</a> | 
-            電郵: <a href="mailto:hello@jrtradinghk.com" style="color: #ccc; text-decoration: none;">hello@jrtradinghk.com</a>
+            電郵: <a href="/cdn-cgi/l/email-protection#7f171a1313103f150d0b0d1e1b1611181714511c1012" style="color: #ccc; text-decoration: none;"><span class="__cf_email__" data-cfemail="bad2dfd6d6d5fad0c8cec8dbded3d4ddd2d194d9d5d7">[email&#160;protected]</span></a>
         </p>
     </footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"1346921a63df40ac875e0188ce0958f3","r":1}' crossorigin="anonymous"></script>
 </html>
