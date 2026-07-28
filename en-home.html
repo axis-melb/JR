@@ -6,6 +6,33 @@
     <title>Home | Juliet & Roland Hong Kong Limited</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="canonical" href="https://jrtradinghk.com/en-home.html" />
+    <style>
+        /* ── Paid booking card (Stripe Payment Link placeholder) ───────── */
+        .booking-card {
+            max-width: 480px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+        .booking-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+        }
+        .booking-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        .booking-card .price {
+            font-size: 1.6rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -42,7 +69,7 @@
                 <h3>Windows & Doors</h3>
                 <p>AS/NZS compliant aluminum windows, bi-folds, entrance doors, and sliding systems.</p>
             </a>
-            
+
             <!-- 🌟 Outdoor Video Card 🌟 -->
             <a href="products.html" class="product-card">
                 <div class="img-wrapper">
@@ -79,8 +106,26 @@
                     <li><strong>For Australian Clients:</strong> Factory audits, QC inspections, and direct supply chain management.</li>
                     <li><strong>For Manufacturers:</strong> Australia market entry strategies and AS/NZS compliance guidance.</li>
                 </ul>
-                <a href="https://wa.me/85266610289" class="btn-solid" target="_blank">Inquire Consulting Service</a>
+                <a href="https://wa.me/85266610289" class="btn-outline" target="_blank">Free Initial WhatsApp Inquiry</a>
             </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         Paid booking section — Stripe Payment Link placeholder
+         Before launch: replace href with the real Stripe Payment Link
+         (Stripe Dashboard → Payment Links → create HKD 600 product → copy link)
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="section section-bg">
+        <div class="text-center" style="margin-bottom: 2.5rem;">
+            <h2 class="title">Book a Paid Consultation</h2>
+            <p class="subtitle">Once payment is confirmed, we'll be in touch within 1 business day to schedule your session.</p>
+        </div>
+        <div class="booking-card">
+            <h3>First Market-Entry Consultation</h3>
+            <span class="price">HKD 600</span>
+            <p>A 60-minute 1:1 session covering your product and target market — AS/NZS compliance requirements, certification pathways, and Australia market-entry strategy.</p>
+            <a href="https://buy.stripe.com/fZu7sNeDw2KDbd13CS04800" class="btn-solid" target="_blank">Book Now →</a>
         </div>
     </section>
 
