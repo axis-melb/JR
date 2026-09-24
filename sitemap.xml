@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jrtradinghk.com/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jrtradinghk.com/" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://jrtradinghk.com/zh-hk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jrtradinghk.com/" />
+  </url>
+  <url>
+    <loc>https://jrtradinghk.com/zh-hk/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jrtradinghk.com/" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://jrtradinghk.com/zh-hk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jrtradinghk.com/" />
+  </url>
+  <url>
+    <loc>https://jrtradinghk.com/about-us.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jrtradinghk.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://jrtradinghk.com/zh-hk/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jrtradinghk.com/about-us.html" />
+  </url>
+  <url>
+    <loc>https://jrtradinghk.com/zh-hk/about-us.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jrtradinghk.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://jrtradinghk.com/zh-hk/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jrtradinghk.com/about-us.html" />
+  </url>
+  <url>
+    <loc>https://jrtradinghk.com/products.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jrtradinghk.com/products.html" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://jrtradinghk.com/zh-hk/products.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jrtradinghk.com/products.html" />
+  </url>
+  <url>
+    <loc>https://jrtradinghk.com/zh-hk/products.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jrtradinghk.com/products.html" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://jrtradinghk.com/zh-hk/products.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jrtradinghk.com/products.html" />
+  </url>
+  <url>
+    <loc>https://jrtradinghk.com/products-flanges.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jrtradinghk.com/products-flanges.html" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://jrtradinghk.com/zh-hk/products-flanges.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jrtradinghk.com/products-flanges.html" />
+  </url>
+  <url>
+    <loc>https://jrtradinghk.com/zh-hk/products-flanges.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jrtradinghk.com/products-flanges.html" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://jrtradinghk.com/zh-hk/products-flanges.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jrtradinghk.com/products-flanges.html" />
+  </url>
+  <url>
+    <loc>https://jrtradinghk.com/process.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jrtradinghk.com/process.html" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://jrtradinghk.com/zh-hk/process.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jrtradinghk.com/process.html" />
+  </url>
+  <url>
+    <loc>https://jrtradinghk.com/zh-hk/process.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jrtradinghk.com/process.html" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://jrtradinghk.com/zh-hk/process.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jrtradinghk.com/process.html" />
   </url>
 </urlset>

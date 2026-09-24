@@ -3,13 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juliet & Roland Hong Kong Limited</title>
+    <title>AS/NZS-Compliant Building Materials from China | Juliet &amp; Roland HK</title>
+    <meta name="description" content="Hong Kong-based sourcing for Australia: AS/NZS-compliant windows, doors, decking and cabinetry from audited Chinese factories, plus market-entry consulting." />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
     <link rel="canonical" href="https://jrtradinghk.com/" />
-    <script>
-        var userLang = navigator.language || navigator.userLanguage; 
-        if (userLang.toLowerCase().includes('zh')) { window.location.replace("zh-hk/index.html"); } 
-        else { window.location.replace("en-home.html"); }
+    <!-- hreflang: must be repeated on both language versions of each page -->
+    <link rel="alternate" hreflang="en" href="https://jrtradinghk.com/" />
+    <link rel="alternate" hreflang="zh-HK" href="https://jrtradinghk.com/zh-hk/" />
+    <link rel="alternate" hreflang="x-default" href="https://jrtradinghk.com/" />
+    <!-- Open Graph / Twitter: link previews (WhatsApp, LinkedIn, WeChat) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Juliet and Roland Hong Kong Limited" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:title" content="AS/NZS-Compliant Building Materials from China | Juliet &amp; Roland HK" />
+    <meta property="og:description" content="Hong Kong-based sourcing for Australia: AS/NZS-compliant windows, doors, decking and cabinetry from audited Chinese factories, plus market-entry consulting." />
+    <meta property="og:url" content="https://jrtradinghk.com/" />
+    <meta property="og:image" content="https://jrtradinghk.com/assets/images/service-consulting.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Structured data: tells Google who the business is -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Juliet and Roland Hong Kong Limited",
+      "url": "https://jrtradinghk.com/",
+      "logo": "https://jrtradinghk.com/assets/images/logo.png",
+      "telephone": "+852 6661 0289",
+      "email": "hello@jrtradinghk.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Tuen Mun", "addressCountry": "HK" },
+      "areaServed": ["AU", "CN", "HK"],
+      "description": "Sourcing and compliance consulting connecting Chinese manufacturers with Australian project standards (AS/NZS)."
+    }
     </script>
+    <style>
+        /* Paid booking card (Stripe Payment Link; quantity can be raised in multiples of HKD 600) */
+        .booking-card { max-width: 480px; margin: 0 auto; background: #fff; border: 1px solid #e5e5e5; border-radius: 6px; padding: 2.5rem; text-align: center; }
+        .booking-card h3 { font-size: 1.4rem; margin-bottom: 0.8rem; }
+        .booking-card p { color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.7; }
+        .booking-card .price { font-size: 1.6rem; font-weight: 600; display: block; margin-bottom: 1.5rem; }
+        /* Language suggestion bar: shown only to Chinese-language browsers, never auto-redirects */
+        #langBar { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 999; background: #222; color: #fff; padding: 12px 20px; font-size: 0.95rem; align-items: center; justify-content: center; gap: 16px; }
+        #langBar.show { display: flex; }
+        #langBar a { color: #fff; text-decoration: underline; }
+        #langBar button { background: none; border: 0; color: #ccc; font-size: 1.2rem; cursor: pointer; }
+    </style>
 </head>
-<body></body>
+<body>
+    <header>
+        <a href="./" class="logo"><img src="assets/images/logo.png" alt="Juliet &amp; Roland Hong Kong logo"></a>
+        <div class="hamburger" role="button" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('active')">
+            <span></span><span></span><span></span>
+        </div>
+        <nav class="nav-links" id="navLinks">
+            <a href="./" class="active">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="products.html">Our Products</a>
+            <a href="process.html">Process</a>
+            <a href="zh-hk/" class="lang-btn">繁體中文</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Engineered for Australia.<br>Sourced Globally.</h1>
+        <p>Built on decades of regulatory expertise. We source AS/NZS-compliant products directly for your business, from windows, doors and structural materials to decking, cabinetry and lifestyle essentials.</p>
+        <div style="display: flex; gap: 15px;">
+            <a href="products.html" class="btn-solid">Explore Products</a>
+            <a href="about-us.html" class="btn-outline">Our Story</a>
+        </div>
+    </section>
+
+    <section class="section section-bg">
+        <div class="text-center">
+            <h2 class="title">Our Products</h2>
+            <p class="subtitle">Custom-engineered and rigorously inspected for the Australian market.</p>
+        </div>
+        <div class="grid-3">
+            <a href="products.html" class="product-card">
+                <div class="img-wrapper"><img src="assets/images/product-windows.jpg" alt="AS/NZS compliant aluminium windows and doors" loading="lazy" decoding="async"></div>
+                <h3>Windows &amp; Doors</h3>
+                <p>AS/NZS compliant aluminum windows, bi-folds, entrance doors, and sliding systems.</p>
+            </a>
+
+            <!-- Outdoor video card -->
+            <a href="products.html" class="product-card">
+                <div class="img-wrapper">
+                    <video autoplay loop muted playsinline preload="metadata" aria-label="Outdoor decking and pergola products">
+                        <source src="assets/images/product-outdoor.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>Outdoor &amp; Alfresco</h3>
+                <p>Premium decking, pergolas, fencing, and outdoor living solutions built for the Aussie climate.</p>
+            </a>
+
+            <a href="products.html" class="product-card">
+                <div class="img-wrapper"><img src="assets/images/product-cabinets.jpg" alt="Custom architectural cabinetry" loading="lazy" decoding="async"></div>
+                <h3>Custom Cabinetry</h3>
+                <p>High-end architectural joinery for kitchens, wardrobes, and bathrooms.</p>
+            </a>
+            <a href="products.html" class="product-card">
+                <div class="img-wrapper"><img src="assets/images/product-steel.jpg" alt="Structural steel and building materials" loading="lazy" decoding="async"></div>
+                <h3>Structural Materials</h3>
+                <p>Reliable sourcing and QC for structural steel, cladding, and general building materials.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="assets/images/service-consulting.jpg" alt="Australia market-entry and supply chain consulting" loading="lazy" decoding="async" style="width: 100%; height: 400px; object-fit: cover; border-radius: 4px;">
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <h2 class="title" style="font-size: 2rem;">Consulting &amp; Supply Chain Services</h2>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 1.1rem;">Beyond trading, we are your strategic partners. With 20 years of hands-on experience, we offer specialized consulting for both Australian builders and Mainland Chinese manufacturers.</p>
+                <ul style="color: var(--text-light); margin-bottom: 2rem; padding-left: 20px; line-height: 1.8;">
+                    <li><strong>For Australian Clients:</strong> Factory audits, QC inspections, and direct supply chain management.</li>
+                    <li><strong>For Manufacturers:</strong> Australia market entry strategies and AS/NZS compliance guidance.</li>
+                </ul>
+                <a href="https://wa.me/85266610289" class="btn-outline" target="_blank" rel="noopener">Free Initial WhatsApp Inquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paid booking section (Stripe Payment Link) -->
+    <section class="section section-bg">
+        <div class="text-center" style="margin-bottom: 2.5rem;">
+            <h2 class="title">Book a Paid Consultation</h2>
+            <p class="subtitle">Once payment is confirmed, we'll be in touch within 1 business day to schedule your session.</p>
+        </div>
+        <div class="booking-card">
+            <h3>First Market-Entry Consultation</h3>
+            <span class="price">HKD 600</span>
+            <p>A 60-minute 1:1 session covering your product and target market — AS/NZS compliance requirements, certification pathways, and Australia market-entry strategy.</p>
+            <a href="https://buy.stripe.com/fZu7sNeDw2KDbd13CS04800" class="btn-solid" target="_blank" rel="noopener">Book Now →</a>
+        </div>
+    </section>
+
+    <div id="langBar">
+        <span>偵測到您使用中文瀏覽器：<a href="zh-hk/">切換到繁體中文版</a></span>
+        <button type="button" aria-label="Close" onclick="dismissLangBar()">&times;</button>
+    </div>
+    <script>
+        // Suggest the Traditional Chinese site to Chinese-language browsers.
+        // No automatic redirect: crawlers and users always get this page.
+        function dismissLangBar() {
+            document.getElementById('langBar').classList.remove('show');
+            try { sessionStorage.setItem('langBarDismissed', '1'); } catch (e) {}
+        }
+        (function () {
+            try {
+                var lang = (navigator.language || '').toLowerCase();
+                if (lang.indexOf('zh') === 0 && !sessionStorage.getItem('langBarDismissed')) {
+                    document.getElementById('langBar').classList.add('show');
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <footer>
+        <p>&copy; 2026 Juliet and Roland Hong Kong Limited. All rights reserved.</p>
+        <p style="margin-top: 10px; line-height: 2;">
+            Tuen Mun, Hong Kong<br>
+            WhatsApp: <a href="https://wa.me/85266610289" style="color: #ccc; text-decoration: none;">+852 6661 0289</a> | 
+            Email: <a href="mailto:hello@jrtradinghk.com" style="color: #ccc; text-decoration: none;">hello@jrtradinghk.com</a>
+        </p>
+    </footer>
+</body>
 </html>
